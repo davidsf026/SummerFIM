@@ -1,21 +1,19 @@
 from app.main_operations import *
-from app.settings_yaml_vars import *
 
 while True:
     # OPERATION CHOICE
     choiceOfOperation = input('summer> ')
 
     # OPERATION EXECUTION
-    if choiceOfOperation=="help":
+    if choiceOfOperation=="":
+        MainOperations.doNothing()
+    elif choiceOfOperation=="help":
         MainOperations.help()
     elif choiceOfOperation=="init":
-        MainOperations.init(SettingsYamlVars.pathToScan, SettingsYamlVars.filesListWithHashesTextFilePath)
+        MainOperations.init()
     elif choiceOfOperation=="update":
-        MainOperations.update(SettingsYamlVars.pathToScan, SettingsYamlVars.filesListWithHashesTextFilePath)
+        MainOperations.update()
     elif choiceOfOperation=="exit":
-        print('Bye bye!')
-        break
-    elif choiceOfOperation=="":
-        pass
+        MainOperations.exit()
     else:
         print("Unknown option, type help to show all avaible commands.")

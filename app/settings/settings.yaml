@@ -1,2 +1,2 @@
-pathToScan: "PUT HERE THE PATH YOU WANT TO MONITOR"
+pathToScan: "/home/david/Documents/Teste"
 filesListWithHashesTextFilePath: "app/data/hash_file.sha2"
